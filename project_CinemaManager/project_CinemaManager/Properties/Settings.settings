@@ -1,0 +1,50 @@
+﻿<?xml version='1.0' encoding='utf-8'?>
+<SettingsFile xmlns="http://schemas.microsoft.com/VisualStudio/2004/01/settings" CurrentProfile="(Default)" GeneratedClassNamespace="project_CinemaManager.Properties" GeneratedClassName="Settings">
+  <Profiles />
+  <Settings>
+    <Setting Name="ServerName" Type="System.String" Scope="User">
+      <Value Profile="(Default)">35.220.208.39</Value>
+    </Setting>
+    <Setting Name="InitialCatalog" Type="System.String" Scope="User">
+      <Value Profile="(Default)" />
+    </Setting>
+    <Setting Name="connectionSTR" Type="System.String" Scope="User">
+      <Value Profile="(Default)" />
+    </Setting>
+    <Setting Name="QLRPConnectionString" Type="(Connection string)" Scope="Application">
+      <DesignTimeValue Profile="(Default)" />
+      <Value Profile="(Default)" />
+    </Setting>
+    <Setting Name="UserID" Type="System.String" Scope="User">
+      <Value Profile="(Default)">sqlserver</Value>
+    </Setting>
+    <Setting Name="pwd" Type="System.String" Scope="User">
+      <Value Profile="(Default)">Hien9029</Value>
+    </Setting>
+    <Setting Name="RefreshTimeOut" Type="System.Int32" Scope="User">
+      <Value Profile="(Default)">1500</Value>
+    </Setting>
+    <Setting Name="QLRPConnectionString_GetMessage" Type="(Connection string)" Scope="Application">
+      <DesignTimeValue Profile="(Default)">&lt;?xml version="1.0" encoding="utf-16"?&gt;
+&lt;SerializableConnectionString xmlns:xsd="http://www.w3.org/2001/XMLSchema" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"&gt;
+  &lt;ConnectionString&gt;Data Source=35.220.208.39;Initial Catalog=QLRP;Persist Security Info=True;User ID=sqlserver;Password=Hien9029&lt;/ConnectionString&gt;
+  &lt;ProviderName&gt;System.Data.SqlClient&lt;/ProviderName&gt;
+&lt;/SerializableConnectionString&gt;</DesignTimeValue>
+      <Value Profile="(Default)">Data Source=35.220.208.39;Initial Catalog=QLRP;Persist Security Info=True;User ID=sqlserver;Password=Hien9029</Value>
+    </Setting>
+    <Setting Name="QLRPConnectionString_GetTicket" Type="(Connection string)" Scope="Application">
+      <DesignTimeValue Profile="(Default)">&lt;?xml version="1.0" encoding="utf-16"?&gt;
+&lt;SerializableConnectionString xmlns:xsd="http://www.w3.org/2001/XMLSchema" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"&gt;
+  &lt;ConnectionString&gt;Data Source=35.220.208.39;Initial Catalog=QLRP;Persist Security Info=True;User ID=sqlserver;Password=Hien9029&lt;/ConnectionString&gt;
+  &lt;ProviderName&gt;System.Data.SqlClient&lt;/ProviderName&gt;
+&lt;/SerializableConnectionString&gt;</DesignTimeValue>
+      <Value Profile="(Default)">Data Source=35.220.208.39;Initial Catalog=QLRP;Persist Security Info=True;User ID=sqlserver;Password=Hien9029</Value>
+    </Setting>
+    <Setting Name="appAccount" Type="System.String" Scope="User">
+      <Value Profile="(Default)">admin</Value>
+    </Setting>
+    <Setting Name="appPassword" Type="System.String" Scope="User">
+      <Value Profile="(Default)">admin</Value>
+    </Setting>
+  </Settings>
+</SettingsFile>

@@ -1,0 +1,479 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<Project ToolsVersion="15.0" xmlns="http://schemas.microsoft.com/developer/msbuild/2003">
+  <Import Project="$(MSBuildExtensionsPath)\$(MSBuildToolsVersion)\Microsoft.Common.props" Condition="Exists('$(MSBuildExtensionsPath)\$(MSBuildToolsVersion)\Microsoft.Common.props')" />
+  <PropertyGroup>
+    <Configuration Condition=" '$(Configuration)' == '' ">Debug</Configuration>
+    <Platform Condition=" '$(Platform)' == '' ">AnyCPU</Platform>
+    <ProjectGuid>{3AEA6F7D-1663-44E8-917E-AFB0511086EF}</ProjectGuid>
+    <OutputType>WinExe</OutputType>
+    <RootNamespace>project_CinemaManager</RootNamespace>
+    <AssemblyName>project_CinemaManager</AssemblyName>
+    <TargetFrameworkVersion>v4.7.2</TargetFrameworkVersion>
+    <FileAlignment>512</FileAlignment>
+    <AutoGenerateBindingRedirects>true</AutoGenerateBindingRedirects>
+    <Deterministic>true</Deterministic>
+    <NuGetPackageImportStamp>
+    </NuGetPackageImportStamp>
+  </PropertyGroup>
+  <PropertyGroup Condition=" '$(Configuration)|$(Platform)' == 'Debug|AnyCPU' ">
+    <PlatformTarget>AnyCPU</PlatformTarget>
+    <DebugSymbols>true</DebugSymbols>
+    <DebugType>full</DebugType>
+    <Optimize>false</Optimize>
+    <OutputPath>bin\Debug\</OutputPath>
+    <DefineConstants>DEBUG;TRACE</DefineConstants>
+    <ErrorReport>prompt</ErrorReport>
+    <WarningLevel>4</WarningLevel>
+  </PropertyGroup>
+  <PropertyGroup Condition=" '$(Configuration)|$(Platform)' == 'Release|AnyCPU' ">
+    <PlatformTarget>AnyCPU</PlatformTarget>
+    <DebugType>pdbonly</DebugType>
+    <Optimize>true</Optimize>
+    <OutputPath>bin\Release\</OutputPath>
+    <DefineConstants>TRACE</DefineConstants>
+    <ErrorReport>prompt</ErrorReport>
+    <WarningLevel>4</WarningLevel>
+  </PropertyGroup>
+  <PropertyGroup>
+    <ApplicationIcon>manager.ico</ApplicationIcon>
+  </PropertyGroup>
+  <ItemGroup>
+    <Reference Include="PresentationCore" />
+    <Reference Include="PresentationFramework" />
+    <Reference Include="System" />
+    <Reference Include="System.ComponentModel.Composition" />
+    <Reference Include="System.ComponentModel.DataAnnotations" />
+    <Reference Include="System.Core" />
+    <Reference Include="System.Data.OracleClient" />
+    <Reference Include="System.Numerics" />
+    <Reference Include="System.Runtime.Serialization" />
+    <Reference Include="System.Security" />
+    <Reference Include="System.Web" />
+    <Reference Include="System.Web.Extensions" />
+    <Reference Include="System.Web.Services" />
+    <Reference Include="System.Xml.Linq" />
+    <Reference Include="System.Data.DataSetExtensions" />
+    <Reference Include="Microsoft.CSharp" />
+    <Reference Include="System.Data" />
+    <Reference Include="System.Deployment" />
+    <Reference Include="System.Drawing" />
+    <Reference Include="System.Windows.Forms" />
+    <Reference Include="System.Xml" />
+    <Reference Include="WindowsBase" />
+  </ItemGroup>
+  <ItemGroup>
+    <Compile Include="Custom\RJToggleButton.cs">
+      <SubType>Component</SubType>
+    </Compile>
+    <Compile Include="Custom\RJToggleButton.Designer.cs">
+      <DependentUpon>RJToggleButton.cs</DependentUpon>
+    </Compile>
+    <Compile Include="QLRPDataSet.cs">
+      <DependentUpon>QLRPDataSet.xsd</DependentUpon>
+    </Compile>
+    <Compile Include="QLRPDataSet.Designer.cs">
+      <AutoGen>True</AutoGen>
+      <DesignTime>True</DesignTime>
+      <DependentUpon>QLRPDataSet.xsd</DependentUpon>
+    </Compile>
+    <Compile Include="Tier 1 Presenstasion\Admin\frmAdmin_SupportCus.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Tier 1 Presenstasion\Admin\frmAdmin_SupportCus.Designer.cs">
+      <DependentUpon>frmAdmin_SupportCus.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Tier 1 Presenstasion\Admin\frmAdmin_GetCusNeedSupport.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Tier 1 Presenstasion\Admin\frmAdmin_GetCusNeedSupport.Designer.cs">
+      <DependentUpon>frmAdmin_GetCusNeedSupport.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Tier 1 Presenstasion\Admin\Manager\UI_Manager\UI_CinemaManager.cs">
+      <SubType>UserControl</SubType>
+    </Compile>
+    <Compile Include="Tier 1 Presenstasion\Admin\Manager\UI_Manager\UI_CinemaManager.Designer.cs">
+      <DependentUpon>UI_CinemaManager.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Tier 1 Presenstasion\Admin\Manager\UI_Manager\UI_Manager.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Tier 1 Presenstasion\Admin\Manager\UI_Manager\UI_Manager.Designer.cs">
+      <DependentUpon>UI_Manager.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Tier 1 Presenstasion\Customer\UI03_ChonChoNgoi.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Tier 1 Presenstasion\Customer\UI03_ChonChoNgoi.Designer.cs">
+      <DependentUpon>UI03_ChonChoNgoi.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Tier 1 Presenstasion\Customer\UI02_ChonGioChieu.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Tier 1 Presenstasion\Customer\UI02_ChonGioChieu.Designer.cs">
+      <DependentUpon>UI02_ChonGioChieu.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Tier 1 Presenstasion\Customer\UI01_ChonPhim.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Tier 1 Presenstasion\Customer\UI01_ChonPhim.Designer.cs">
+      <DependentUpon>UI01_ChonPhim.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Tier 1 Presenstasion\Customer\UI00_ThongTinKhachHang.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Tier 1 Presenstasion\Customer\UI00_ThongTinKhachHang.Designer.cs">
+      <DependentUpon>UI00_ThongTinKhachHang.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Tier 1 Presenstasion\Admin\Manager\UI_Manager\UI_AccountManager.cs">
+      <SubType>UserControl</SubType>
+    </Compile>
+    <Compile Include="Tier 1 Presenstasion\Admin\Manager\UI_Manager\UI_AccountManager.Designer.cs">
+      <DependentUpon>UI_AccountManager.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Tier 1 Presenstasion\Admin\Manager\UI_Manager\UI_CustomerManager.cs">
+      <SubType>UserControl</SubType>
+    </Compile>
+    <Compile Include="Tier 1 Presenstasion\Admin\Manager\UI_Manager\UI_CustomerManager.Designer.cs">
+      <DependentUpon>UI_CustomerManager.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Tier 1 Presenstasion\Admin\Manager\UI_Manager\UI_DataManager.cs">
+      <SubType>UserControl</SubType>
+    </Compile>
+    <Compile Include="Tier 1 Presenstasion\Admin\Manager\UI_Manager\UI_DataManager.Designer.cs">
+      <DependentUpon>UI_DataManager.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Tier 1 Presenstasion\Admin\Manager\Data_Filler\Data_Cinema.cs">
+      <SubType>UserControl</SubType>
+    </Compile>
+    <Compile Include="Tier 1 Presenstasion\Admin\Manager\Data_Filler\Data_Cinema.Designer.cs">
+      <DependentUpon>Data_Cinema.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Tier 1 Presenstasion\Admin\Manager\Data_Filler\Data_FormatMovie.cs">
+      <SubType>UserControl</SubType>
+    </Compile>
+    <Compile Include="Tier 1 Presenstasion\Admin\Manager\Data_Filler\Data_FormatMovie.Designer.cs">
+      <DependentUpon>Data_FormatMovie.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Tier 1 Presenstasion\Admin\Manager\Data_Filler\Data_Genre.cs">
+      <SubType>UserControl</SubType>
+    </Compile>
+    <Compile Include="Tier 1 Presenstasion\Admin\Manager\Data_Filler\Data_Genre.Designer.cs">
+      <DependentUpon>Data_Genre.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Tier 1 Presenstasion\Admin\Manager\Data_Filler\Data_Movie.cs">
+      <SubType>UserControl</SubType>
+    </Compile>
+    <Compile Include="Tier 1 Presenstasion\Admin\Manager\Data_Filler\Data_Movie.Designer.cs">
+      <DependentUpon>Data_Movie.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Tier 1 Presenstasion\Admin\Manager\Data_Filler\Data_ScreenType.cs">
+      <SubType>UserControl</SubType>
+    </Compile>
+    <Compile Include="Tier 1 Presenstasion\Admin\Manager\Data_Filler\Data_ScreenType.Designer.cs">
+      <DependentUpon>Data_ScreenType.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Tier 1 Presenstasion\Admin\Manager\Data_Filler\Data_ShowTimes.cs">
+      <SubType>UserControl</SubType>
+    </Compile>
+    <Compile Include="Tier 1 Presenstasion\Admin\Manager\Data_Filler\Data_ShowTimes.Designer.cs">
+      <DependentUpon>Data_ShowTimes.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Tier 1 Presenstasion\Admin\Manager\Data_Filler\Data_Tickets.cs">
+      <SubType>UserControl</SubType>
+    </Compile>
+    <Compile Include="Tier 1 Presenstasion\Admin\Manager\Data_Filler\Data_Tickets.Designer.cs">
+      <DependentUpon>Data_Tickets.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Tier 1 Presenstasion\Admin\Manager\UI_Manager\UI_Revenue.cs">
+      <SubType>UserControl</SubType>
+    </Compile>
+    <Compile Include="Tier 1 Presenstasion\Admin\Manager\UI_Manager\UI_Revenue.Designer.cs">
+      <DependentUpon>UI_Revenue.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Tier 1 Presenstasion\Customer\UI04_RequestSupport.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Tier 1 Presenstasion\Customer\UI04_RequestSupport.Designer.cs">
+      <DependentUpon>UI04_RequestSupport.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Tier 1 Presenstasion\Customer\UI05_ChangePassword.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Tier 1 Presenstasion\Customer\UI05_ChangePassword.Designer.cs">
+      <DependentUpon>UI05_ChangePassword.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Tier 1 Presenstasion\Customer\UI06_TicketForCustomer.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Tier 1 Presenstasion\Customer\UI06_TicketForCustomer.Designer.cs">
+      <DependentUpon>UI06_TicketForCustomer.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Tier 1 Presenstasion\Customer\UI07_Payment.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Tier 1 Presenstasion\Customer\UI07_Payment.Designer.cs">
+      <DependentUpon>UI07_Payment.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Tier 1 Presenstasion\frmLogin.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Tier 1 Presenstasion\frmLogin.Designer.cs">
+      <DependentUpon>frmLogin.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Tier 1 Presenstasion\Admin\frmAdmin.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Tier 1 Presenstasion\Admin\frmAdmin.Designer.cs">
+      <DependentUpon>frmAdmin.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Tier 1 Presenstasion\Admin\frmReport.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Tier 1 Presenstasion\Admin\frmReport.Designer.cs">
+      <DependentUpon>frmReport.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Tier 1 Presenstasion\frmSignUp.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Tier 1 Presenstasion\frmSignUp.Designer.cs">
+      <DependentUpon>frmSignUp.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Program.cs" />
+    <Compile Include="Properties\AssemblyInfo.cs" />
+    <Compile Include="Tier 1 Presenstasion\frmTestConnection.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Tier 1 Presenstasion\frmTestConnection.Designer.cs">
+      <DependentUpon>frmTestConnection.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Tier 1 Presenstasion\frm_ChangePasswordForProtector.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Tier 1 Presenstasion\frm_ChangePasswordForProtector.Designer.cs">
+      <DependentUpon>frm_ChangePasswordForProtector.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Tier 1 Presenstasion\frm_ProtectConectingdatabase.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Tier 1 Presenstasion\frm_ProtectConectingdatabase.Designer.cs">
+      <DependentUpon>frm_ProtectConectingdatabase.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Tier 1 Presenstasion\frmSettings.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Tier 1 Presenstasion\frmSettings.Designer.cs">
+      <DependentUpon>frmSettings.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Tier 2 Application\Account.cs" />
+    <Compile Include="Tier 2 Application\Cinema.cs" />
+    <Compile Include="Tier 2 Application\Customer.cs" />
+    <Compile Include="Tier 2 Application\FormatMovie.cs" />
+    <Compile Include="Tier 2 Application\Genre.cs" />
+    <Compile Include="Tier 2 Application\Messages.cs" />
+    <Compile Include="Tier 2 Application\Movie.cs" />
+    <Compile Include="Tier 2 Application\MovieByGenre.cs" />
+    <Compile Include="Tier 2 Application\ScreenType.cs" />
+    <Compile Include="Tier 2 Application\ShowTimes.cs" />
+    <Compile Include="Tier 2 Application\Ticket.cs" />
+    <Compile Include="Tier 3 DB\AccountDB.cs" />
+    <Compile Include="Tier 3 DB\CinemaDB.cs" />
+    <Compile Include="Tier 3 DB\CustomerDB.cs" />
+    <Compile Include="Tier 3 DB\DataProvider.cs" />
+    <Compile Include="Tier 3 DB\FormatMovieDB.cs" />
+    <Compile Include="Tier 3 DB\GenreDB.cs" />
+    <Compile Include="Tier 3 DB\MessagesDB.cs" />
+    <Compile Include="Tier 3 DB\MovieByGenreDB.cs" />
+    <Compile Include="Tier 3 DB\MovieDB.cs" />
+    <Compile Include="Tier 3 DB\RevenueDB.cs" />
+    <Compile Include="Tier 3 DB\ScreenTypeDB.cs" />
+    <Compile Include="Tier 3 DB\ShowTimesDB.cs" />
+    <Compile Include="Tier 3 DB\TicketDB.cs" />
+    <EmbeddedResource Include="Custom\RJToggleButton.resx">
+      <DependentUpon>RJToggleButton.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="ReportTicket.rdlc" />
+    <EmbeddedResource Include="Tier 1 Presenstasion\Admin\frmAdmin.resx">
+      <DependentUpon>frmAdmin.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Tier 1 Presenstasion\Admin\frmAdmin_SupportCus.resx">
+      <DependentUpon>frmAdmin_SupportCus.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Tier 1 Presenstasion\Admin\frmAdmin_GetCusNeedSupport.resx">
+      <DependentUpon>frmAdmin_GetCusNeedSupport.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Tier 1 Presenstasion\Admin\Manager\UI_Manager\UI_CinemaManager.resx">
+      <DependentUpon>UI_CinemaManager.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Tier 1 Presenstasion\Admin\Manager\UI_Manager\UI_Manager.resx">
+      <DependentUpon>UI_Manager.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Tier 1 Presenstasion\Customer\UI03_ChonChoNgoi.resx">
+      <DependentUpon>UI03_ChonChoNgoi.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Tier 1 Presenstasion\Customer\UI02_ChonGioChieu.resx">
+      <DependentUpon>UI02_ChonGioChieu.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Tier 1 Presenstasion\Customer\UI01_ChonPhim.resx">
+      <DependentUpon>UI01_ChonPhim.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Tier 1 Presenstasion\Customer\UI00_ThongTinKhachHang.resx">
+      <DependentUpon>UI00_ThongTinKhachHang.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Tier 1 Presenstasion\Admin\Manager\UI_Manager\UI_AccountManager.resx">
+      <DependentUpon>UI_AccountManager.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Tier 1 Presenstasion\Admin\Manager\UI_Manager\UI_CustomerManager.resx">
+      <DependentUpon>UI_CustomerManager.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Tier 1 Presenstasion\Admin\Manager\UI_Manager\UI_DataManager.resx">
+      <DependentUpon>UI_DataManager.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Tier 1 Presenstasion\Admin\Manager\Data_Filler\Data_Cinema.resx">
+      <DependentUpon>Data_Cinema.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Tier 1 Presenstasion\Admin\Manager\Data_Filler\Data_FormatMovie.resx">
+      <DependentUpon>Data_FormatMovie.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Tier 1 Presenstasion\Admin\Manager\Data_Filler\Data_Genre.resx">
+      <DependentUpon>Data_Genre.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Tier 1 Presenstasion\Admin\Manager\Data_Filler\Data_Movie.resx">
+      <DependentUpon>Data_Movie.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Tier 1 Presenstasion\Admin\Manager\Data_Filler\Data_ScreenType.resx">
+      <DependentUpon>Data_ScreenType.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Tier 1 Presenstasion\Admin\Manager\Data_Filler\Data_ShowTimes.resx">
+      <DependentUpon>Data_ShowTimes.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Tier 1 Presenstasion\Admin\Manager\Data_Filler\Data_Tickets.resx">
+      <DependentUpon>Data_Tickets.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Tier 1 Presenstasion\Admin\Manager\UI_Manager\UI_Revenue.resx">
+      <DependentUpon>UI_Revenue.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Tier 1 Presenstasion\Customer\UI04_RequestSupport.resx">
+      <DependentUpon>UI04_RequestSupport.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Tier 1 Presenstasion\Customer\UI05_ChangePassword.resx">
+      <DependentUpon>UI05_ChangePassword.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Tier 1 Presenstasion\Customer\UI06_TicketForCustomer.resx">
+      <DependentUpon>UI06_TicketForCustomer.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Tier 1 Presenstasion\Customer\UI07_Payment.resx">
+      <DependentUpon>UI07_Payment.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Tier 1 Presenstasion\frmLogin.resx">
+      <DependentUpon>frmLogin.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Tier 1 Presenstasion\Admin\frmReport.resx">
+      <DependentUpon>frmReport.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Tier 1 Presenstasion\frmSettings.resx">
+      <DependentUpon>frmSettings.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Tier 1 Presenstasion\frmSignUp.resx">
+      <DependentUpon>frmSignUp.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Properties\Resources.resx">
+      <Generator>ResXFileCodeGenerator</Generator>
+      <LastGenOutput>Resources.Designer.cs</LastGenOutput>
+      <SubType>Designer</SubType>
+    </EmbeddedResource>
+    <Compile Include="Properties\Resources.Designer.cs">
+      <AutoGen>True</AutoGen>
+      <DependentUpon>Resources.resx</DependentUpon>
+      <DesignTime>True</DesignTime>
+    </Compile>
+    <EmbeddedResource Include="Tier 1 Presenstasion\frmTestConnection.resx">
+      <DependentUpon>frmTestConnection.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Tier 1 Presenstasion\frm_ChangePasswordForProtector.resx">
+      <DependentUpon>frm_ChangePasswordForProtector.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Tier 1 Presenstasion\frm_ProtectConectingdatabase.resx">
+      <DependentUpon>frm_ProtectConectingdatabase.cs</DependentUpon>
+    </EmbeddedResource>
+    <None Include="Properties\Settings.settings">
+      <Generator>SettingsSingleFileGenerator</Generator>
+      <LastGenOutput>Settings.Designer.cs</LastGenOutput>
+    </None>
+    <Compile Include="Properties\Settings.Designer.cs">
+      <AutoGen>True</AutoGen>
+      <DependentUpon>Settings.settings</DependentUpon>
+      <DesignTimeSharedInput>True</DesignTimeSharedInput>
+    </Compile>
+    <EmbeddedResource Include="ReportCinema.rdlc" />
+    <None Include="QLRPDataSet.xsc">
+      <DependentUpon>QLRPDataSet.xsd</DependentUpon>
+    </None>
+    <None Include="QLRPDataSet.xsd">
+      <Generator>MSDataSetGenerator</Generator>
+      <LastGenOutput>QLRPDataSet.Designer.cs</LastGenOutput>
+      <SubType>Designer</SubType>
+    </None>
+    <None Include="QLRPDataSet.xss">
+      <DependentUpon>QLRPDataSet.xsd</DependentUpon>
+    </None>
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="App.config" />
+  </ItemGroup>
+  <ItemGroup>
+    <Content Include="DataBase SQL\DatabaseQLRP.sql">
+      <SubType>Form</SubType>
+    </Content>
+    <None Include="Resource\CGV.png" />
+    <Content Include="manager.ico" />
+    <Content Include="Resource\352095_settings_icon.png" />
+    <Content Include="Resource\Icon\account.ico" />
+    <Content Include="Resource\Icon\chat.ico" />
+    <Content Include="Resource\Icon\infor.ico" />
+    <Content Include="Resource\Icon\manager.ico" />
+    <Content Include="Resource\Icon\password.ico" />
+    <Content Include="Resource\Icon\register.ico" />
+    <Content Include="Resource\Icon\Select.ico" />
+    <Content Include="Resource\Icon\ticket.ico" />
+    <None Include="Resource\Momo.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <Folder Include="Resource\Image\" />
+  </ItemGroup>
+  <ItemGroup>
+    <WCFMetadata Include="Connected Services\" />
+  </ItemGroup>
+  <ItemGroup>
+    <PackageReference Include="EO.WebBrowser">
+      <Version>22.1.42</Version>
+    </PackageReference>
+    <PackageReference Include="HtmlAgilityPack">
+      <Version>1.11.43</Version>
+    </PackageReference>
+    <PackageReference Include="jQuery">
+      <Version>3.6.0</Version>
+    </PackageReference>
+    <PackageReference Include="jQuery.Validation">
+      <Version>1.19.4</Version>
+    </PackageReference>
+    <PackageReference Include="Microsoft.AspNet.Mvc">
+      <Version>5.2.9</Version>
+    </PackageReference>
+    <PackageReference Include="Microsoft.ReportingServices.ReportViewerControl.Winforms">
+      <Version>150.1484.0</Version>
+    </PackageReference>
+    <PackageReference Include="Microsoft.ReportViewer.Common">
+      <Version>10.0.40219.1</Version>
+    </PackageReference>
+    <PackageReference Include="Microsoft.SqlServer.Types">
+      <Version>14.0.314.76</Version>
+    </PackageReference>
+    <PackageReference Include="QRCoder">
+      <Version>1.4.3</Version>
+    </PackageReference>
+    <PackageReference Include="System.Configuration.ConfigurationManager">
+      <Version>6.0.0</Version>
+    </PackageReference>
+  </ItemGroup>
+  <Import Project="$(MSBuildToolsPath)\Microsoft.CSharp.targets" />
+</Project>
